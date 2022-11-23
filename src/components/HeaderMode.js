@@ -101,15 +101,15 @@ const HeaderMode = (props) => {
             </ul>
           </div>
         </header>
-      </div>
 
-      {props.mode ? (
-        <div class="button-tweet-mobile d-flex" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          <img src="./pen.png" alt="" className="m-auto" />
-        </div>
-      ) : (
-        ""
-      )}
+        {props.mode ? (
+          <div class="button-tweet-mobile d-flex" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img src="./pen.png" alt="" className="m-auto" />
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
     </div>
   );
 };

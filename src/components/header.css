@@ -100,7 +100,7 @@
 
   .button-tweet-mobile {
     position: fixed;
-    z-index: 2;
+    z-index: 1;
     bottom: 10%;
     right: 15px;
     border-radius: 50%;
@@ -115,6 +115,11 @@
 
   .modal-dialog {
     z-index: 99 !important;
-    margin-top: 30%;
+    margin-top: 20%;
+    height: 100vh;
+  }
+
+  .modal-content {
+    z-index: 2;
   }
 }
