@@ -1,0 +1,19 @@
+.sampul {
+  height: 300px;
+}
+.sampul img {
+  width: 100%;
+}
+
+.ava {
+  width: 100%;
+}
+
+.jumbotron-profile {
+  padding-bottom: 20px;
+}
+
+.detail-user .disabled {
+  color: rgb(95, 94, 94);
+  margin-top: -20px;
+}

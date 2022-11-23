@@ -1,0 +1,218 @@
+* {
+  font-size: 20px;
+}
+
+.beranda {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1.3fr;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+main {
+  padding-top: 25px;
+  border: 0.5px solid rgb(233, 233, 233);
+}
+
+span {
+  justify-self: start;
+}
+
+aside {
+  padding-top: 25px;
+}
+
+.tittle {
+  font-weight: bold;
+}
+
+.img img {
+  cursor: pointer;
+}
+
+.updateStatus p {
+  font-size: 15px;
+  height: auto;
+}
+
+textarea {
+  width: 100%;
+  /* height: fit-content; */
+  border: none;
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.media input {
+  display: none;
+}
+
+.media img {
+  width: 20px;
+  box-sizing: border-box;
+}
+
+.media img:hover {
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.twit {
+  width: 60px;
+  margin-left: -15px;
+}
+
+.pencarian button {
+  border: none;
+  background-color: transparent;
+}
+
+.pencarian span {
+  border-right: none;
+  background-color: transparent;
+}
+
+.trendings {
+  background-color: rgb(243, 243, 243);
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+.list-trending {
+  margin-left: -38px;
+}
+
+.list-trending li {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.username .name {
+  font-weight: 600;
+}
+
+.image-status img {
+  width: 100%;
+}
+
+.footer button {
+  display: none;
+}
+
+.retweet img,
+.love img {
+  opacity: 0.7;
+}
+
+.footer img {
+  cursor: pointer;
+}
+
+.main {
+  width: 100%;
+}
+
+.tombol-war button {
+  font-size: 15px;
+}
+
+.imagePreview img {
+  width: 50%;
+}
+.imagePreviews img {
+  width: 50%;
+}
+
+.option img {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.options {
+  z-index: 99;
+  width: 30%;
+  top: 0;
+  position: absolute;
+  box-sizing: border-box;
+  height: 100px;
+  right: 0;
+  background-color: white;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+}
+
+.options li:hover {
+  cursor: pointer;
+  background-color: rgb(236, 235, 235);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(34, 34, 34);
+}
+
+a:hover {
+  color: rgb(34, 34, 34);
+}
+
+/* .modal-body input {
+  padding: 3px;
+  width: 100%;
+
+} */
+
+.modalaja {
+  display: none;
+}
+
+.options-container {
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.gambarUpdate img {
+  width: 100%;
+}
+
+.delete:hover {
+  color: red;
+}
+
+.button-tidak-aktif {
+  cursor: default;
+  font-size: 15px;
+  background-color: rgb(169, 207, 250);
+}
+
+.updateStatus textarea {
+  white-space: pre-wrap;
+  rows: fit-content;
+}
+
+@media screen and (max-width: 1023px) {
+  main {
+    padding: 0px !important;
+    border: none;
+  }
+
+  .colom-postingan {
+    padding: 0px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    padding-top: 0px;
+  }
+}

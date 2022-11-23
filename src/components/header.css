@@ -1,0 +1,91 @@
+.menu ul > li {
+  cursor: pointer;
+  border-radius: 15px;
+  padding: 10px;
+  height: min-content;
+}
+
+.menu ul > .bg:hover {
+  background-color: rgb(238, 238, 238);
+}
+
+@media screen and (min-width: 1024px) {
+  #ulheaders li {
+    display: flex;
+
+    align-items: center;
+  }
+
+  #ulheaders {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu {
+    align-items: center;
+  }
+
+  li p {
+    margin-bottom: 0px !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .headers-container {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+
+    /* left: 0;
+    right: 0;
+    bottom: 0;
+    top: 50px; */
+  }
+
+  a p {
+    display: none;
+  }
+
+  .logo-headers,
+  .logo-headers img {
+    display: none;
+    width: 0;
+    padding: 0px !important;
+    margin: 0px !important;
+  }
+
+  header {
+    position: fixed;
+    padding: 13px;
+    margin: 0;
+    border-top: 1px solid rgb(131, 130, 130);
+    /* top: 0; */
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    /* height: 100vh; */
+    background-color: white !important;
+    left: 0;
+    right: 0;
+  }
+
+  #ulheaders {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 0px;
+  }
+
+  .menu {
+    width: 100%;
+    align-items: center;
+  }
+
+  .tweet-header,
+  .tweet-header > button {
+    display: none;
+  }
+}
