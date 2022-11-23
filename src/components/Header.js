@@ -8,7 +8,7 @@ const Header = (props) => {
   const [newStatus, setNewStatus] = React.useState("");
   const [newImage, setNewImage] = React.useState("");
   const [imagePreview, setImagePreview] = React.useState(null);
-  const { mode, setMode } = React.useContext(modeContext);
+  const { mode, setMode, setPerubahan, perubahan } = React.useContext(modeContext);
   console.log(mode);
   console.log(window.innerWidth);
 
@@ -60,7 +60,24 @@ const Header = (props) => {
     setImagePreview(null);
   };
 
-  return <div class="col-sm-3 text-start ">{<HeaderMode mode={mode} addStatus={addStatus} newStatus={newStatus} writeStatus={writeStatus} imagePreview={imagePreview} closeImage={closeImage} newImage={newImage} />}</div>;
+  return (
+    <div class="col-sm-3 text-start ">
+      {
+        <HeaderMode
+          mode={mode}
+          addStatus={addStatus}
+          newStatus={newStatus}
+          writeStatus={writeStatus}
+          imagePreview={imagePreview}
+          closeImage={closeImage}
+          newImage={newImage}
+          ImageUploads={ImageUploads}
+          setPerubahan={setPerubahan}
+          perubahan={perubahan}
+        />
+      }
+    </div>
+  );
 };
 
 export default Header;

@@ -90,7 +90,23 @@ const Beranda = () => {
     return <Postingan status={sts.text} gambar={`https://merntwitwar.herokuapp.com/${sts.image}`} setPerubahan={setPerubahan} id={sts._id} />;
   });
   return (
-    <div class="container-fluid">
+    <div class="container-fluid beranda-container">
+      {" "}
+      {mode ? (
+        <div class="nav-mobile d-flex py-1 px-2">
+          <div class="img-user">
+            <Link to={`/:username`}>
+              <img src="./sohee.jpg" class="rounded-circle img-thumbnail profile" alt="sohee" width="50px" />
+            </Link>
+          </div>
+          <div class="text my-auto mx-3">
+            {" "}
+            <b>Beranda</b>{" "}
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
       <div class="row">
         <Header setPerubahan={setPerubahan} mode={mode} />
 

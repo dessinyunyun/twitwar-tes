@@ -12,10 +12,18 @@ import Profile from "./components/halamanProfil/Profile";
 
 function App() {
   const [mode, setMode] = React.useState(false);
+  const [perubahan, setPerubahan] = React.useState(false);
+
+  React.useEffect(() => {
+    if (window.innerWidth < 1023) {
+      setMode(true);
+    }
+  }, [perubahan]);
+
   return (
     <BrowserRouter>
       <div className="App">
-        <modeContext.Provider value={{ mode, setMode }}>
+        <modeContext.Provider value={{ mode, setMode, perubahan, setPerubahan }}>
           <Routes>
             <Route path="/" element={<Beranda />} />
             <Route path="/:username" element={<Profile />} />

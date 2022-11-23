@@ -6,20 +6,6 @@ const HeaderMode = (props) => {
   console.log(props);
   return (
     <div>
-      {" "}
-      {props.mode ? (
-        <div class="nav-mobile d-flex">
-          <div class="img-user">
-            <img src="./sohee.jpg" class="rounded-circle img-thumbnail profile" alt="sohee" width="50px" />
-          </div>
-          <div class="text my-auto mx-3">
-            {" "}
-            <b>Beranda</b>{" "}
-          </div>
-        </div>
-      ) : (
-        ""
-      )}
       <div class="col-sm-3 text-start headers-container">
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -49,8 +35,8 @@ const HeaderMode = (props) => {
                       <input type="file" id="uploadGambars" onChange={props.ImageUploads} class="btn btn-outline-secondary" />
                     </div>
                     <div class="tombol-war">
-                      {props.newStatus.length > 0 || props.newImage.length > 0 ? (
-                        <button className="btn btn-primary rounded-pill btn-sm" type="submit" data-bs-dismiss="modal">
+                      {props.newStatus.length > 0 || props.newImage ? (
+                        <button className="btn btn-primary rounded-pill btn-sm" type="submit" data-bs-dismiss="modal" onClick={(e) => props.setPerubahan(!props.perubahan)}>
                           War!!!
                         </button>
                       ) : (
@@ -116,6 +102,14 @@ const HeaderMode = (props) => {
           </div>
         </header>
       </div>
+
+      {props.mode ? (
+        <div class="button-tweet-mobile d-flex" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <img src="./pen.png" alt="" className="m-auto" />
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

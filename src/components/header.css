@@ -34,7 +34,7 @@
   .headers-container {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.6);
-    z-index: 2;
+    z-index: 1;
 
     /* left: 0;
     right: 0;
@@ -87,5 +87,34 @@
   .tweet-header,
   .tweet-header > button {
     display: none;
+  }
+
+  .nav-mobile {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    background-color: white;
+  }
+
+  .button-tweet-mobile {
+    position: fixed;
+    z-index: 2;
+    bottom: 10%;
+    right: 15px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(0, 132, 255);
+  }
+
+  .modal-backdrop {
+    z-index: 0;
+  }
+
+  .modal-dialog {
+    z-index: 99 !important;
+    margin-top: 30%;
   }
 }

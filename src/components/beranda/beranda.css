@@ -215,4 +215,8 @@ a:hover {
     justify-content: center;
     padding-top: 0px;
   }
+
+  .beranda-container {
+    margin-top: 50px;
+  }
 }

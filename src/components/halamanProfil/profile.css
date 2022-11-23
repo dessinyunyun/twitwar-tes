@@ -7,6 +7,8 @@
 
 .ava {
   width: 100%;
+  margin-top: 120px;
+  top: 0;
 }
 
 .jumbotron-profile {
@@ -16,4 +18,31 @@
 .detail-user .disabled {
   color: rgb(95, 94, 94);
   margin-top: -20px;
+}
+
+@media screen and (max-width: 1023px) {
+  .ava {
+    margin-top: 80px;
+  }
+
+  .edit-profile button {
+    font-size: 18px;
+  }
+
+  .detail-user p {
+    font-size: 18px;
+  }
+
+  .jumbotron-profile {
+    border-bottom: 1px solid rgb(158, 158, 158);
+    width: 100%;
+  }
+
+  .sampul {
+    height: 200px;
+  }
+
+  .container-profile {
+    margin-top: 50px;
+  }
 }

@@ -6,6 +6,7 @@ import Postingan from "../beranda/Postingan";
 import "./profile.css";
 import { modeContext } from "../../context/ModeContext";
 import HeaderMode from "../HeaderMode";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
   const { mode, setMode } = React.useContext(modeContext);
@@ -85,27 +86,42 @@ const Profile = () => {
     return <Postingan status={sts.text} gambar={`https://merntwitwar.herokuapp.com/${sts.image}`} setPerubahan={setPerubahan} id={sts._id} />;
   });
   return (
-    <div className="container-fluid">
+    <div className="container-fluid container-profile">
       <div class="row">
         <Header setPerubahan={setPerubahan} />
         <div class="col-sm-6  center">
           <main>
-            <p className="text-start mx-3 tittle">nyun</p>
+            {" "}
+            {mode ? (
+              <div class="nav-mobile d-flex py-1 px-2">
+                <div class="img-user">
+                  <Link to={`/`}>
+                    <img src="./left-arrow.png" class="rounded-circle img-thumbnail profile" alt="sohee" width="40px" />
+                  </Link>
+                </div>
+                <div class="text my-auto mx-3">
+                  {" "}
+                  <b>Nyun</b>{" "}
+                </div>
+              </div>
+            ) : (
+              ""
+            )}
             <div class="jumbotron-profile">
               <div class="picture  position-relative">
                 <div class="sampul">
                   <img src="./skate.jpg" alt="" />
                 </div>
-                <div class="ava position-absolute px-3 justify-content-between d-flex top-50 end-0">
+                <di v class="ava position-absolute px-3 justify-content-between d-flex ">
                   <div class="col-sm-3 col-4">
                     <img src="./sohee.jpg" class="rounded-circle img-thumbnail profile" alt="sohee" />
                   </div>
-                  <div class="edit-profile col-sm-8 col-8 align-self-end d-flex justify-content-end ">
-                    <button type="button" class="btn btn-outline-dark btn-sm rounded-pill fs-6 text ">
+                  <div class="edit-profile col-sm-8 col-5 align-self-end d-flex justify-content-end ">
+                    <button type="button" class="btn btn-outline-dark btn-sm rounded-pill ">
                       Edit Profile
                     </button>
                   </div>
-                </div>
+                </di>
               </div>
               {/* tes */}
               <div class="detail-user mt-3 text-start px-3">
@@ -124,7 +140,6 @@ const Profile = () => {
                 </span>
               </div>
             </div>
-
             {kumpulanStatus}
           </main>
         </div>
