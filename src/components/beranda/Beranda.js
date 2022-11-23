@@ -164,7 +164,7 @@ const Beranda = () => {
 
             {kumpulanStatus}
           </main>
-          {status.length == 0 && <h3 className="mt-5 px-3">Tunggu beberapa saat, maklum Hosting gratis</h3>}
+          {status.length == 0 && <h3 className="mt-5 px-3">Tunggu beberapa saat, maklum Hosting gratis...</h3>}
         </div>
 
         {mode ? <div class="kosong"></div> : <Aside />}
